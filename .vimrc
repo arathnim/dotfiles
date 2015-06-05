@@ -88,3 +88,15 @@ hi NERDTreeDirSlash ctermfg=246
 hi NERDTreeUp ctermfg=239
 hi NERDTreeOpenable ctermfg=232
 hi NERDTreeClosable ctermfg=232
+
+map <C-Up> :wincmd k <CR> :echo '' <CR>
+map <C-Down> :wincmd j <CR> :echo '' <CR>
+map <C-Left> :wincmd h <CR> :echo '' <CR>
+map <C-Right> :wincmd l <CR>  :echo '' <CR>
+map <C-n> :NERDTree <CR>  :echo '' <CR>
+
+imap <C-Up> :wincmd k <CR>  :echo '' <CR>
+imap <C-Down> :wincmd j <CR>  :echo '' <CR>
+imap <C-Left> :wincmd h <CR>  :echo '' <CR>
+imap <C-Right> :wincmd l <CR>  :echo '' <CR>
+imap <C-n> :NERDTree <CR>  :echo '' <CR>
