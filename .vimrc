@@ -89,27 +89,26 @@ hi NERDTreeUp ctermfg=239
 hi NERDTreeOpenable ctermfg=232
 hi NERDTreeClosable ctermfg=232
 
-map <C-Up> :wincmd k <CR> :echo '' <CR>
-map <C-Down> :wincmd j <CR> :echo '' <CR>
-map <C-Left> :wincmd h <CR> :echo '' <CR>
-map <C-Right> :wincmd l <CR>  :echo '' <CR>
-map <C-n> :NERDTree <CR>  :echo '' <CR>
+"map <C-Up> :wincmd k <CR> :echo '' <CR>
+"map <C-Down> :wincmd j <CR> :echo '' <CR>
+"map <C-Left> :wincmd h <CR> :echo '' <CR>
+"map <C-Right> :wincmd l <CR>  :echo '' <CR>
+"map <C-n> :NERDTree <CR>  :echo '' <CR>
 
-imap <C-Up> :wincmd k <CR>  :echo '' <CR>
-imap <C-Down> :wincmd j <CR>  :echo '' <CR>
-imap <C-Left> :wincmd h <CR>  :echo '' <CR>
-imap <C-Right> :wincmd l <CR>  :echo '' <CR>
-imap <C-n> :NERDTree <CR>  :echo '' <CR>
+"imap <C-Up> :wincmd k <CR>  :echo '' <CR>
+"imap <C-Down> :wincmd j <CR>  :echo '' <CR>
+"imap <C-Left> :wincmd h <CR>  :echo '' <CR>
+"imap <C-Right> :wincmd l <CR>  :echo '' <CR>
+"imap <C-n> :NERDTree <CR>  :echo '' <CR>
 
-" Becuase Mac; Uses Command Key
 map <D-Up> :wincmd k <CR> :echo '' <CR>
 map <D-Down> :wincmd j <CR> :echo '' <CR>
 map <D-Left> :wincmd h <CR> :echo '' <CR>
 map <D-Right> :wincmd l <CR>  :echo '' <CR>
-map <D-n> :NERDTree <CR>  :echo '' <CR>
+map <C-n> :NERDTree <CR>  :echo '' <CR>
 
 imap <D-Up> :wincmd k <CR>  :echo '' <CR>
 imap <D-Down> :wincmd j <CR>  :echo '' <CR>
 imap <D-Left> :wincmd h <CR>  :echo '' <CR>
 imap <D-Right> :wincmd l <CR>  :echo '' <CR>
-imap <D-n> :NERDTree <CR>  :echo '' <CR>
+imap <C-n> :NERDTree <CR>  :echo '' <CR>
