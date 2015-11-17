@@ -101,7 +101,7 @@ imap <C-Left> :wincmd h <CR>  :echo '' <CR>
 imap <C-Right> :wincmd l <CR>  :echo '' <CR>
 imap <C-n> :NERDTree <CR>  :echo '' <CR>
 
-# Becuase Mac; Uses Command Key
+" Becuase Mac; Uses Command Key
 map <D-Up> :wincmd k <CR> :echo '' <CR>
 map <D-Down> :wincmd j <CR> :echo '' <CR>
 map <D-Left> :wincmd h <CR> :echo '' <CR>
