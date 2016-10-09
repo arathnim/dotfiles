@@ -1,16 +1,3 @@
-;;; deep-thought-theme.el --- Emacs 24 theme with the Answer to The Ultimate Question
-;;;
-;;; Author: Jason Milkins <jasonm23@gmail.com>
-;;; Url: https://github.com/jasonm23/emacs-deep-thought-theme
-;;; Version: 0.1.1
-;;;
-;;; Changelog :
-;;; 0.1.1 : Updated modeline, region, paren-match/mismatch and flymake colors.
-;;; 0.1.0 : Added rainbow-mode switch for editing
-;;; 0.0.9 : Changed powerline/main-line colors
-;;; 0.0.8 : Added main-line and powerline support
-;;; 0.0.7 : Added auto load for adding to custom theme path
-;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
 ;;; the Free Software Foundation, version 3 of the License.
@@ -19,20 +6,14 @@
 ;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;;; GNU General Public License for more details.
-;;;
-;;; You should have received a copy of the GNU General Public License
-;;; along with GNU Emacs.
-;;;
-;;; This file is not a part of Emacs
-;;; http://emacsfodder.github.com
-;;;
 
-(deftheme deep-thought
-  "deep-thought-theme By: Jason Milkins - emacsfodder.github.com")
+
+(deftheme modded-thought
+  "")
 
 (custom-theme-set-variables
- 'deep-thought
- '(main-line-color1 "#191919")
+ 'modded-thought
+ '(main-line-color1 "#101010")
  '(main-line-color2 "#111111")
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
@@ -41,14 +22,14 @@
  )
 
 (custom-theme-set-faces
- 'deep-thought
+ 'modded-thought
 
  '(default
    (
-    (((class color) (min-colors 16777216)) (:foreground "#fff" :background "#000F14"))
-    (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
-    (((class color) (min-colors 16))       (:foreground "#fff" :background "#000"))
-    (((class color) (min-colors 8))        (:foreground "#fff" :background "#000")))
+    (((class color) (min-colors 16777216)) (:foreground "white" :background "#000F14"))
+    (((class color) (min-colors 88))       (:foreground "white" :background "#000"))
+    (((class color) (min-colors 16))       (:foreground "white" :background "#000"))
+    (((class color) (min-colors 8))        (:foreground "white" :background "#000")))
    )
 
  '(fixed-pitch
@@ -58,11 +39,11 @@
    ((t (:family "Sans Serif"))))
 
  '(escape-glyph
-   ((t (:foreground "#FFF" :background "#111d3c"))))
+   ((t (:foreground "#ccc" :background "#000000"))))
 
  ;; Line Numbers (linum-mode)
  '(linum
-   ((t (:background "unspecified-bg" :foreground "#222222" :box nil :height 100))))
+   ((t (:background "unspecified-bg" :foreground "#404040" :box nil :height 100))))
 
  ;; Margin Fringes
  '(fringe
@@ -70,10 +51,10 @@
 
  ;; Mode-line / status line
  '(mode-line
-   ((t (:background "#222222" :box nil :foreground "#FFFFFF" :height 85))))
+   ((t (:background "unspecified-bg" :box nil :foreground "#aaaaaa" :height 85))))
 
  '(mode-line-inactive
-   ((t (:weight light :box nil :background "#001520" :foreground "#000000" :inherit (mode-line)))))
+   ((t (:weight light :box nil :background "unspecified-bg" :foreground "#aaaaaa" :inherit (mode-line)))))
 
  '(mode-line-emphasis
    ((t (:weight bold))))
@@ -90,17 +71,17 @@
 
  ;; Minibuffer
  '(minibuffer-prompt
-   ((t (:weight bold :foreground "#208ae2"))))
+   ((t (:weight bold :foreground "blue"))))
 
  '(minibuffer-message
-   ((t (:foreground "#ffffff"))))
+   ((t (:foreground "white"))))
 
- ;; Region
+ ;; Region - used to be "#102530"
  '(region
-   ((t (:background "#102530"))))
+   ((t (:background "#2a2a2a"))))
 
- ;; show-paren-mode
- '(show-paren-match ((t (:foreground "#fff" :background "#256" ))))
+ ;; show-paren-mode - #256
+ '(show-paren-match ((t (:foreground "#cccccc" :background "unspecified-bg" :underline t))))
  '(show-paren-mismatch ((t (:foreground "#fff" :background "#700" ))))
 
  ;; flymake
@@ -114,20 +95,20 @@
    ((((class color) (min-colors 88) (background dark)) (:background "#144083"))))
 
  ;; font-lock - syntax
- '(font-lock-builtin-face              ((t (:foreground "#106590"))))
- '(font-lock-comment-face              ((t (:foreground "#105f89" :italic t ))))
- '(font-lock-comment-delimiter-face    ((t (:foreground "#1078a2" :italic t ))))
+ '(font-lock-builtin-face              ((t (:foreground "color-241"))))
+ '(font-lock-comment-face              ((t (:foreground "#505050"))))
+ '(font-lock-comment-delimiter-face    ((t (:foreground "#404040"))))
  '(font-lock-doc-face                  ((t (:inherit (font-lock-string-face)))))
- '(font-lock-function-name-face        ((t (:foreground "#1083be"))))
- '(font-lock-keyword-face              ((t (:foreground "#1a8da7"))))
+ '(font-lock-function-name-face        ((t (:foreground "brightblack"))))
+ '(font-lock-keyword-face              ((t (:foreground "white")))) ;; #357696
  '(font-lock-preprocessor-face         ((t (:inherit (font-lock-builtin-face)))))
  '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
  '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- '(font-lock-string-face               ((t (:foreground "#10adee"))))
- '(font-lock-constant-face             ((t (:foreground "#1a99e7"))))
- '(font-lock-type-face                 ((t (:foreground "#1f5e8a"))))
- '(font-lock-variable-name-face        ((t (:foreground "#1e8eb8"))))
- '(font-lock-warning-face              ((t (:weight bold :foreground "#FF0000"))))
+ '(font-lock-string-face               ((t (:foreground "#a3d9cc")))) ;; #a3d9cc 
+ '(font-lock-constant-face             ((t (:foreground "#a3d9cc"))))
+ '(font-lock-type-face                 ((t (:foreground "white"))))
+ '(font-lock-variable-name-face        ((t (:foreground "white"))))
+ '(font-lock-warning-face              ((t (:foreground "blue"))))
  '(font-lock-negation-char-face        ((t (:inherit font-lock-warning-face))))
 
  ;; Hightlight
@@ -150,10 +131,10 @@
 
 
  '(link (
-         (((class color) (min-colors 88) (background light)) (:underline t :foreground "#1057f0")) 
-         (((class color) (background light)) (:underline t :foreground "#1044a0")) 
-         (((class color) (min-colors 88) (background dark))  (:underline t :foreground "#1069aa")) 
-         (((class color) (background dark))  (:underline t :foreground "#1069aa")) (t (:inherit (underline)))))
+         (((class color) (min-colors 88) (background light)) (:underline t :foreground "#8fabbf")) 
+         (((class color) (background light)) (:underline t :foreground "#8fabbf")) 
+         (((class color) (min-colors 88) (background dark))  (:underline t :foreground "#8fabbf")) 
+         (((class color) (background dark))  (:underline t :foreground "#8fabbf")) (t (:inherit (underline)))))
 
  '(link-visited ((default (:inherit (link))) 
                  (((class color) (background light)) (:inherit (link))) 
@@ -170,25 +151,25 @@
  '(tooltip ((default nil) (nil nil)))
 
  '(isearch
-   ((((class color) (min-colors 88)) (:foreground "#FF6600" :background "#000"))
+   ((((class color) (min-colors 88)) (:foreground "#8fabbf" :background "#111"))
     (((class color) (min-colors 16)) (:foreground "#1088cc" :background "#000"))
     (((class color) (min-colors 8)) (:foreground "#1088cc" :background "#000")) (t (:inverse-video t))))
 
  '(isearch-fail
-   ((((class color) (min-colors 88)) (:background "#880000"))
-    (((class color) (min-colors 16)) (:background "#FF0000"))
-    (((class color) (min-colors 8)) (:background "#FF0000"))
+   ((((class color) (min-colors 88)) (:background "unspecified-bg" :foreground "red"))
+    (((class color) (min-colors 16)) (:background "unspecified-bg" :foreground "red"))
+    (((class color) (min-colors 8)) (:background "unspecified-bg" :foreground "red"))
     (((class color grayscale)) (:foreground "#888888")) (t (:inverse-video t))))
 
  '(lazy-highlight
-   ((((class color) (min-colors 88) (background light)) (:background "#1877dd"))
-    (((class color) (min-colors 88) (background dark)) (:background "#1777dd"))
+   ((((class color) (min-colors 88) (background light)) (:background "#333333"))
+    (((class color) (min-colors 88) (background dark)) (:background "#333333"))
     (((class color) (min-colors 16)) (:background "#144499")) 
     (((class color) (min-colors 8)) (:background "#155599")) (t (:underline t))))
 
  '(match
-   ((((class color) (min-colors 88) (background light)) (:background "#1388cc"))
-    (((class color) (min-colors 88) (background dark)) (:background "#1388cc"))
+   ((((class color) (min-colors 88) (background light)) (:background "#444444"))
+    (((class color) (min-colors 88) (background dark)) (:background "#444444"))
     (((class color) (min-colors 8) (background light)) (:foreground "#000000" :background "#139"))
     (((class color) (min-colors 8) (background dark)) (:foreground "#ffffff" :background "#159")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "#888888"))))
 
@@ -199,16 +180,16 @@
 
 ;; Rainbow delimiters
 (defun deep-thought-rainbow-delim-set-face ()
-  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#19f" )
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#18d" )
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#168" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#146" )
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#236" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#235" )
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#234" )
-  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#246" )
-  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#279" )
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#900" ))
+  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#4D555A")
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#4D555A"))
 
 (eval-after-load "rainbow-delimiters" '(deep-thought-rainbow-delim-set-face))
 
@@ -218,7 +199,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'deep-thought)
+(provide-theme 'modded-thought)
 
 ;; Local Variables:
 ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
